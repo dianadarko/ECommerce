@@ -52,13 +52,13 @@ public class OrderControllerTest {
 
     @Test
     public void submit_order() {
-        ResponseEntity<UserOrder> userOrder= orderController.submit("test");
+        ResponseEntity<UserOrder> userOrder= orderController.submit("diana");
         assertEquals(200,userOrder.getStatusCodeValue());
     }
 
     @Test
     public void getOrdersForUser_test(){
-        ResponseEntity<List<UserOrder>> ordersList =orderController.getOrdersForUser("test");
+        ResponseEntity<List<UserOrder>> ordersList =orderController.getOrdersForUser("diana");
         assertEquals(200,ordersList.getStatusCodeValue());
     }
 
